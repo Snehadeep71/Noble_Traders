@@ -32,7 +32,9 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-
+.sec1head:nth-child(1){
+    display: block;
+}
 
 .sec1headsocial {
     display: flex;
@@ -848,7 +850,7 @@ a {
     width: 40%;
     height: 250px;
 
-    background: url(images/img21.jpg) center center/cover;
+    background: url(images/img44.jpg) center center/cover;
 
 
 }
@@ -1070,7 +1072,7 @@ a {
 .sec-5 {
     width: 100%;
     min-height: 100vh;
-    background: url(images/services-bcg.jpg) center center/cover;
+    background: url(images/our-service7.avif) center center/cover;
     padding-bottom: 60px;
     box-sizing: border-box;
 
@@ -1120,26 +1122,39 @@ a {
 
 }
 
+/* Main container styling */
 .sec-5box1 {
-    /* border: 2px solid red; */
     width: 100%;
     max-width: 21%;
-    height: auto;
+    height: 500px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-    gap: 20px;
     position: relative;
-    
+    overflow: hidden; /* Prevents overflow outside the box */
 }
 
+/* Swiper container should take up the full size of the image section */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensures the slides stay within the box */
+}
+
+/* Each slide should fit within the box */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure slides take full height of the box */
+}
+
+/* Image styling for the slides */
 .sec-5box1 img {
     width: 100%;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire slide without stretching */
 }
 
+/* Content styling */
 .sec-5box1content {
     position: absolute;
     bottom: 0;
@@ -1147,25 +1162,22 @@ a {
     padding: 20px;
     box-sizing: border-box;
     line-height: 1.6;
+    z-index: 10; /* Ensure the content stays on top */
+    width: 100%; /* Ensure the content takes full width */
 }
 
-.sec-5box1 {
-    overflow: hidden;
-    /* Prevents the image from overflowing */
-    position: relative;
-    /* Ensures proper positioning for overflow */
+/* Hover effect for the image */
+.swiper-slide img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    transition: transform 0.5s ease-in-out; /* Smooth scaling effect */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
-.sec-5box1 img {
-    transition: transform 0.5s ease-in-out;
-    /* Smooth scaling effect */
-}
-
-.sec-5box1 img:hover {
-    transform: scale(1.1);
-    /* Scale up the image on hover */
-    cursor: pointer;
-    /* Change cursor to pointer */
+/* Navigation buttons styling */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000; /* Customize navigation buttons color */
+    z-index: 11; /* Ensure buttons stay on top */
 }
 /*-----------------sec 2 mobile responsive ness css starts here---------*/
 @media only screen and (min-width:200px) and (max-width:1336px){
@@ -1302,7 +1314,7 @@ a {
 }
 
 .sec-7box1:nth-child(2) {
-    background: url(images/img33.jpg) no-repeat center center/cover;
+    background: url(images/zebra-blinds2.jpeg) no-repeat center center/cover;
 
 
 }
@@ -1432,7 +1444,8 @@ a {
     justify-content: center;
     text-align: center;
     border: 2px solid grey;
-    background: url(images/img39.jpg);
+    background: url(images/our-service2.jpg) center center/cover;
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1469,7 +1482,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top,rgba(209, 133, 72, 0.7) 40% ,#fff 100%);
+    /* background: linear-gradient(to top,rgba(209, 133, 72, 0.7) 40% ,#fff 100%); */
+    background: url(images/our-service10.jpg) center center/cover;
     /* background-color: #191d28; */
     padding: 0px 8%;
     box-sizing: border-box;
@@ -1930,11 +1944,11 @@ form {
 }
 
 .sec-12box:nth-child(2) {
-    background: url(images/img44.jpg) no-repeat center/cover;
+    background: url(images/our-service8.jpg) no-repeat center/cover;
 }
 
 .sec-12box:nth-child(3) {
-    background: url(images/img48.jpg) no-repeat center/cover;
+    background: url(images/our-service5.webp) no-repeat center/cover;
 }
 
 .sec-12box:hover {
