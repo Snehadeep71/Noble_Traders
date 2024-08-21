@@ -173,3 +173,22 @@ function sendwhatsapp(event) {
 document.getElementById('contactForm').addEventListener('submit', sendwhatsapp);
 
 /*-----------------------contact us js ends here------------*/
+/*------glass work film slider js starts here---------------*/ 
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+});
+/*------glass work film slider js ends here---------------*/ 
